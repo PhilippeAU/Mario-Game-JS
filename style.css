@@ -37,7 +37,7 @@
   #score {
     position: absolute;
     top: 0;
-    left: 7.5%;
+    left: 10.5%;
     font-size: xx-large;
     font-family: 'New Super Mario Font U', sans-serif;
     color: black;
@@ -61,11 +61,11 @@
   }
   
   #play-again {
-    width: 50%;
-    height: 100px;
+    width: 35%;
+    height: 70px;
     position: absolute;
     top: 30%;
-    left: 25%;
+    left: 30%;
     font-size: xx-large;
     padding: 0.5rem 2rem;
     border: 2px solid #d91c0e;

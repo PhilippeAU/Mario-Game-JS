@@ -26,12 +26,14 @@ const loop = () => {
     if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
 
     
-       // pipe.style.animation = 'block'
-        //pipe.style.left = `${pipePosition}px`
+      pipe.style.animation = 'block';
+      pipe.style.right = `${pipePosition}px`;
     
-        //mario.style.animation = 'block'
-       // mario.style.bottom = `${marioPosition}px`
-        playAgainBtn.style.display = 'block';
+      //mario.style.animation = 'block';
+      //mario.style.bottom = `${marioPosition}px`;
+
+      playAgainBtn.style.display = 'block';
+      pipe.style.pipePosition = '180px';
     
       if (score > highScore) {
         highScore = score;
@@ -51,30 +53,36 @@ const loop = () => {
 };
 
 const startGame = () => {
-    
 
   playAgainBtn.style.display = 'none';
-
-
+  
   score = 0;
   scoreElement.innerHTML = score;
-
 
   loop();
 };
 
 const restartGame = () => {
  
-    playAgainBtn.style.width = '500px';
-    playAgainBtn.style.height = '100px';
+    playAgainBtn.style.width = '35%';
+    playAgainBtn.style.height = '70px';
     playAgainBtn.style.position = 'absolute';
     playAgainBtn.style.top = '30%';
-    playAgainBtn.style.left = '40%';
+    playAgainBtn.style.left = '30%';
     playAgainBtn.style.right = '0';
     playAgainBtn.style.bottom = '0';
-  
+
+    pipe.style.animation = '';
+    pipe.style.right = '0';
+
+    //if(pipe.style.animation === block){
+      //pipe.style.animation = 'display';
+
+    //}
+
     startGame();
-  };
+
+};
 document.addEventListener('keydown', jump);
 
 
